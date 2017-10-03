@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>assign1test</groupId>
+  <artifactId>studentRegTest</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>studentRegTest</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+  <repositories>
+  	<repository>
+  		<id>dropbox-mvn-repo</id>
+  		<name>Maven_Repo</name>
+  		<url> https://www.dropbox.com/sh/i64t0q5rznq7388/AAD9elWMU5fRv1TjydjQfLf8a?dl=0 </url>
+  	</repository>
+  </repositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+	    <groupId>assign1</groupId>
+	    <artifactId>studentReg</artifactId>
+	    <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    
+    
+    
+  </dependencies>
+  
+  
+  
+</project>

@@ -4,7 +4,7 @@
 
   <groupId>assign1test</groupId>
   <artifactId>studentRegTest</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   <packaging>jar</packaging>
 
   <name>studentRegTest</name>
@@ -15,14 +15,25 @@
   </properties>
   
   <repositories>
-  	<repository>
+  
+  	<!-- <repository>
   		<id>dropbox-mvn-repo</id>
   		<name>Maven_Repo</name>
   		<url> https://www.dropbox.com/sh/i64t0q5rznq7388/AAD9elWMU5fRv1TjydjQfLf8a?dl=0 </url>
+  	</repository> -->
+  	
+  	<repository>
+  	
+  		<id>bintray-cbreathnach-student_reg</id>
+    		<name>cbreathnach-student_reg</name>
+   		<url>https://dl.bintray.com/cbreathnach/student_reg/</url>
+  	
   	</repository>
+  	
   </repositories>
 
   <dependencies>
+  
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -30,11 +41,19 @@
       <scope>test</scope>
     </dependency>
     
-    <dependency>
+    <!-- <dependency>
 	    <groupId>assign1</groupId>
 	    <artifactId>studentReg</artifactId>
 	    <version>0.0.1-SNAPSHOT</version>
-    </dependency>
+    </dependency> -->
+    
+    
+    <dependency>
+  		<groupId>assign1</groupId>
+  		<artifactId>studentReg</artifactId>
+  		<version>0.0.1</version>
+  		<!-- <type>pom</type> -->
+	</dependency>
     
     
     

@@ -8,34 +8,44 @@
   <packaging>jar</packaging>
 
   <name>studentRegTest</name>
-  <url>http://maven.apache.org</url>
+  <url>https://github.com/cbreathnach/CT417_StudentRegTest</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.1.0</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <transformers>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <mainClass>assign1test.studentRegTest.StudentTest</mainClass>
+                </transformer>
+              </transformers>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  
   <repositories>
   
-  	<!-- <repository>
-  		<id>dropbox-mvn-repo</id>
-  		<name>Maven_Repo</name>
-  		<url> https://www.dropbox.com/sh/i64t0q5rznq7388/AAD9elWMU5fRv1TjydjQfLf8a?dl=0 </url>
-  	</repository> -->
-  	
-  	<!-- <repository>
-  	
-  		<id>bintray-cbreathnach-student_reg</id>
-    		<name>cbreathnach-student_reg</name>
-   		<url>https://dl.bintray.com/cbreathnach/student_reg/</url>
-  	
-  	</repository> -->
-  	
 	<repository>
 	    <id>jitpack.io</id>
 	    <url>https://jitpack.io</url>
 	</repository>
-
-  	
+	
   </repositories>
 
   <dependencies>
@@ -46,26 +56,13 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-    
-    <!-- <dependency>
-	    <groupId>assign1</groupId>
-	    <artifactId>studentReg</artifactId>
-	    <version>0.0.1-SNAPSHOT</version>
-    </dependency> -->
-    
+ 
    <dependency>
 	    <groupId>com.github.cbreathnach</groupId>
 	    <artifactId>CT417_StudentReg</artifactId>
 	    <version>2.0</version>
 	</dependency>
-    
-    <!-- <dependency>
-  		<groupId>assign1</groupId>
-  		<artifactId>studentReg</artifactId>
-  		<version>0.0.1</version>
-  		<type>pom</type>
-	</dependency> -->
-    
+	
   </dependencies>
   
 </project>
